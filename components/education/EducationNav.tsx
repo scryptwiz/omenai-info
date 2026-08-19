@@ -46,11 +46,11 @@ export default function EducationNav() {
       className="fixed top-0 left-0 right-0 z-100 px-[5vw] py-6 md:px-16 md:py-[1.8rem] flex items-center justify-between bg-transparent transition-colors duration-500 border-b border-transparent backdrop-blur-md"
     >
       <Link href="/" className="edu-nav-item hover-target flex items-center">
-        <img
-          src="/omenai_logo.png"
-          alt="Omenai Logo"
-          className="h-8 w-auto"
-        />
+          <img
+            src="/omenai_logo.png"
+            alt="Omenai Logo"
+            className="h-5 md:h-7 w-auto"
+          />
       </Link>
 
       <div className="flex items-center gap-6 md:gap-10">

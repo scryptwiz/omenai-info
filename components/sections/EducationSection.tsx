@@ -86,7 +86,7 @@ export default function EducationSection() {
       ref={sectionRef}
       className="relative px-[5vw] py-32 md:py-48 bg-white z-10"
     >
-      <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16 md:mb-24">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16 md:mb-24">
         <div>
           <p
             id="edu-sec-eyebrow"

@@ -191,7 +191,7 @@ export default function Navigation() {
           <img
             src="/omenai_logo.png"
             alt="Omenai Logo"
-            className="nav-logo-img h-8 w-auto transition-[filter] duration-500 brightness-0 invert"
+            className="nav-logo-img h-5 md:h-7 w-auto transition-[filter] duration-500 brightness-0 invert"
           />
         </div>
         <div className="flex items-center gap-6">
