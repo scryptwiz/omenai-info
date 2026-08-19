@@ -92,14 +92,14 @@ export default function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative min-h-[100svh] md:min-h-screen overflow-hidden bg-deepblue block p-0"
+      className="relative min-h-svh md:min-h-screen overflow-hidden bg-deepblue block p-0"
     >
       <div
         ref={leftRef}
-        className="relative z-[2] w-full h-full md:w-[min(920px,88vw)] pt-[18vh] pb-[12vh] px-[6vw] md:pt-[22vh] md:pb-[13vh] md:pl-[8vw] md:pr-0 text-white"
+        className="relative z-2 w-full h-full md:w-[min(1400px,92vw)] pt-[18vh] pb-[12vh] px-[6vw] md:pt-[22vh] md:pb-[13vh] md:pl-[8vw] md:pr-0 text-white"
       >
         <p className="hero-eyebrow flex items-center gap-4 text-[0.65rem] tracking-[0.4em] text-gold uppercase mb-10 opacity-0">
-          <span className="inline-block w-8 h-[1px] bg-gold scale-x-100 origin-left" />
+          <span className="inline-block w-8 h-px bg-gold scale-x-100 origin-left" />
           01 &mdash; What is Omenai
         </p>
 
@@ -107,8 +107,8 @@ export default function Hero() {
           className="hero-title font-serif text-[clamp(3.4rem,16vw,6rem)] md:text-[clamp(3.5rem,7.5vw,10rem)] font-light leading-[0.82] md:leading-[0.78] tracking-[-0.01em] text-white"
           aria-label="Discover and collect Contemporary African Art"
         >
-          <span className="block overflow-hidden pb-[0.06em]">
-            <em className="word inline-block translate-y-[110%] not-italic italic text-gold">
+          <span className="block overflow-hidden pb-[0.06em] pr-[0.15em]">
+            <em className="word inline-block translate-y-[110%] italic text-gold">
               Discover
             </em>
           </span>
@@ -119,8 +119,8 @@ export default function Hero() {
               collect
             </span>
           </span>
-          <span className="block overflow-hidden pb-[0.06em]">
-            <em className="word inline-block translate-y-[110%] not-italic italic text-gold">
+          <span className="block overflow-hidden pb-[0.06em] pr-[0.15em]">
+            <em className="word inline-block translate-y-[110%] italic text-gold">
               Contemporary
             </em>
           </span>
@@ -133,14 +133,14 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="hero-desc mt-12 text-[0.88rem] leading-[1.85] text-white/60 max-w-[380px] md:ml-[9vw] opacity-0">
+        <p className="hero-desc mt-12 text-[0.88rem] leading-[1.85] text-white/60 max-w-95 md:ml-[9vw] opacity-0">
           Omenai is the premier digital marketplace dedicated exclusively to
           contemporary African art — connecting collectors, galleries, and
           artists across Africa and its diaspora through a curated web platform
           and mobile app.
         </p>
 
-        <div className="hero-meta mt-10 flex flex-wrap items-center gap-[0.5rem] md:gap-6 md:ml-[9vw] opacity-0">
+        <div className="hero-meta mt-10 flex flex-wrap items-center gap-2 md:gap-6 md:ml-[9vw] opacity-0">
           <span className="text-[0.65rem] tracking-[0.15em] py-[0.45rem] px-[1.1rem] uppercase rounded-none bg-gold text-deepblue border border-gold font-medium">
             Web &amp; Mobile
           </span>
@@ -159,9 +159,9 @@ export default function Hero() {
           className="hero-img-frame absolute inset-0 overflow-hidden opacity-100 rounded-none transform-none [clip-path:inset(0_0_100%_0)]"
         >
           {/* Deep blue vignette: left edge is fully opaque deepblue, fades to transparent at ~55% then shows the art */}
-          <div className="absolute inset-0 bg-gradient-to-r from-deepblue via-deepblue/70 to-transparent z-[1] pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-r from-deepblue via-deepblue/70 to-transparent z-1 pointer-events-none" />
           {/* Bottom fade so text always reads against dark */}
-          <div className="absolute inset-0 bg-gradient-to-t from-deepblue/60 via-transparent to-deepblue/30 z-[1] pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-t from-deepblue/60 via-transparent to-deepblue/30 z-1 pointer-events-none" />
           <Image
             ref={imgRef}
             src="/images/gallery_auth.jpg"
@@ -170,14 +170,14 @@ export default function Hero() {
             className="object-cover transform scale-[1.16] saturate-[0.6] contrast-[1.08] brightness-[0.75]"
             priority
           />
-          <span className="hero-img-caption absolute z-[2] bottom-8 ml-[65vw] whitespace-nowrap text-[0.62rem] tracking-[0.2em] text-white/70 uppercase bg-deepblue/50 backdrop-blur-md py-[0.6rem] px-4 rounded-sm hidden md:block border border-white/10">
+          <span className="hero-img-caption absolute z-2 bottom-8 ml-[65vw] whitespace-nowrap text-[0.62rem] tracking-[0.2em] text-white/70 uppercase bg-deepblue/50 backdrop-blur-md py-[0.6rem] px-4 rounded-sm hidden md:block border border-white/10">
             Contemporary African Art — Omenai Collection
           </span>
         </div>
 
         {/* Large decorative "01" — white/gold toned */}
         <div
-          className="hero-number absolute font-serif font-light text-white/[0.07] leading-none select-none top-[12vh] right-[1.5rem] text-[clamp(8rem,18vw,16rem)]"
+          className="hero-number absolute font-serif font-light text-white/[0.07] leading-none select-none top-[12vh] right-6 text-[clamp(8rem,18vw,16rem)]"
           aria-hidden="true"
         >
           01
@@ -186,16 +186,16 @@ export default function Hero() {
         {/* Orbit ring — white/gold instead of deepblue-on-deepblue */}
         <div
           ref={orbitRef}
-          className="hero-orbit absolute z-[3] aspect-square border border-gold/40 rounded-full hidden md:block w-[75vw] right-[-38vw] top-[10vh] md:w-[32vw] md:right-[-10vw] md:top-[21vh]"
+          className="hero-orbit absolute z-3 aspect-square border border-gold/40 rounded-full hidden md:block w-[75vw] right-[-38vw] top-[10vh] md:w-[32vw] md:right-[-10vw] md:top-[21vh]"
           aria-hidden="true"
         >
-          <div className="absolute w-[10px] h-[10px] rounded-full bg-gold left-[7%] top-[22%] shadow-[0_0_0_8px_rgba(176,141,64,0.25)]" />
+          <div className="absolute w-2.5 h-2.5 rounded-full bg-gold left-[7%] top-[22%] shadow-[0_0_0_8px_rgba(176,141,64,0.25)]" />
           {/* Second subtle inner ring */}
           <div className="absolute inset-[15%] rounded-full border border-white/10" />
         </div>
 
         <div
-          className="hero-vertical absolute right-8 top-1/2 z-[4] text-white/40 text-[0.55rem] tracking-[0.4em] uppercase [writing-mode:vertical-rl] hidden md:block"
+          className="hero-vertical absolute right-8 top-1/2 z-4 text-white/40 text-[0.55rem] tracking-[0.4em] uppercase [writing-mode:vertical-rl] hidden md:block"
           aria-hidden="true"
         >
           Art · Africa · The world
@@ -203,7 +203,7 @@ export default function Hero() {
       </div>
 
       <div className="scroll-cue absolute bottom-[2.2rem] left-[5vw] flex gap-[0.8rem] items-center text-[0.58rem] tracking-[0.25em] uppercase z-[3] text-white/50">
-        <i className="w-[42px] h-[1px] bg-gold/70 origin-left animate-[cue_1.8s_ease-in-out_infinite]" />
+        <i className="w-10.5 h-px bg-gold/70 origin-left animate-[cue_1.8s_ease-in-out_infinite]" />
         <span>Scroll to explore</span>
       </div>
     </section>
