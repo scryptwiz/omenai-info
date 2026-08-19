@@ -48,7 +48,7 @@ export default function CourseCard({
     <Link href={`/education/${id}`} className="block group h-full">
       <div
         ref={cardRef}
-        className="flex flex-col gap-5 hover-target p-4 md:p-6 bg-white/5 hover:bg-white/10 rounded-sm transition-colors duration-500 shadow-sm border border-white/10 hover:shadow-xl h-full"
+        className="flex flex-col gap-5 hover-target p-4 md:p-6 bg-white hover:bg-deepblue rounded-sm transition-colors duration-500 shadow-sm border border-border-custom hover:shadow-xl h-full"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -60,15 +60,15 @@ export default function CourseCard({
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-deepblue/20 pointer-events-none transition-colors duration-500 group-hover:bg-transparent" />
+          <div className="absolute inset-0 bg-ink/5 pointer-events-none transition-colors duration-500 group-hover:bg-transparent" />
 
-          <div className="absolute top-3 left-3 bg-deepblue/80 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full flex items-center justify-center">
-            <span className="text-[0.6rem] uppercase tracking-widest text-gold font-sans font-medium leading-none pb-[1px]">
+          <div className="absolute top-3 left-3 bg-[#F6F6F6]/90 backdrop-blur-md border border-border-custom px-3 py-1 rounded-full flex items-center justify-center">
+            <span className="text-[0.6rem] uppercase tracking-widest text-deepblue font-sans font-medium leading-none pb-[1px]">
               Masterclass
             </span>
           </div>
 
-          <div className="absolute bottom-3 right-3 flex items-center gap-1 bg-deepblue/80 backdrop-blur-md px-2 py-1 rounded-sm border border-white/10">
+          <div className="absolute bottom-3 right-3 flex items-center gap-1 bg-[#F6F6F6]/90 backdrop-blur-md px-2 py-1 rounded-sm border border-border-custom">
             <svg
               width="12"
               height="12"
@@ -76,24 +76,24 @@ export default function CourseCard({
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              className="text-white"
+              className="text-ink"
             >
               <polygon points="5 3 19 12 5 21 5 3"></polygon>
             </svg>
-            <span className="text-[0.65rem] text-white font-sans font-medium">
+            <span className="text-[0.65rem] text-ink font-sans font-medium">
               {duration}
             </span>
           </div>
         </div>
 
         <div ref={infoRef} className="flex flex-col flex-1">
-          <h3 className="font-serif text-xl font-normal text-white group-hover:text-gold transition-colors duration-300 line-clamp-2">
+          <h3 className="font-serif text-xl font-normal text-ink group-hover:text-white transition-colors duration-300 line-clamp-2">
             {title}
           </h3>
-          <p className="font-sans text-sm text-white/60 group-hover:text-white/90 transition-colors duration-300 mt-2 uppercase tracking-wider text-[0.7rem]">
+          <p className="font-sans text-sm text-ink/60 group-hover:text-white/80 transition-colors duration-300 mt-2 uppercase tracking-wider text-[0.7rem]">
             by {instructor}
           </p>
-          <div className="flex gap-3 mt-auto pt-4 text-[0.65rem] uppercase tracking-widest text-white/40 group-hover:text-white/60 transition-colors duration-300">
+          <div className="flex gap-3 mt-auto pt-4 text-[0.65rem] uppercase tracking-widest text-ink/40 group-hover:text-white/60 transition-colors duration-300">
             <span>{level}</span>
           </div>
         </div>

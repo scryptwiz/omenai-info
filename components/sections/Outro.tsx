@@ -107,17 +107,49 @@ export default function Outro() {
           </h2>
         </div>
 
-        <div className="outro-url-wrap text-left md:text-right opacity-0">
-          <a
-            href="https://omenai.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover-target inline-block font-serif text-[1rem] text-gold tracking-[0.08em] pb-1 border-b border-gold/40 transition-colors hover:text-white hover:border-white"
-          >
-            omenai.app
-          </a>
-          <span className="block text-[0.65rem] tracking-[0.2em] text-[#F4F4F4]/80 uppercase mt-3">
-            Available on Web &amp; iOS
+        <div className="outro-url-wrap text-left md:text-right opacity-0 flex flex-col items-start md:items-end gap-6 mt-12 md:mt-0">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-end gap-4 w-full">
+            {/* App Store Button */}
+            <a
+              href="https://apps.apple.com/ng/app/omenai/id6748387089"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-target flex items-center justify-center gap-3 bg-white text-deepblue px-6 py-4 rounded-full font-sans font-medium text-[0.7rem] tracking-[0.2em] uppercase hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300 w-full sm:w-auto whitespace-nowrap"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.88 2.22 0 4.1 1.05 5.22 2.62-4.14 2.1-3.29 7.6 1.16 9.32-1.06 2.4-2.82 5.09-4.96 5.11zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+              </svg>
+              iOS
+            </a>
+
+            {/* Play Store Button */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.omenai.omenaiapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-target flex items-center justify-center gap-3 bg-white text-deepblue px-6 py-4 rounded-full font-sans font-medium text-[0.7rem] tracking-[0.2em] uppercase hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300 w-full sm:w-auto whitespace-nowrap"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.52 14.53l-2.4-2.4 2.4-2.4 2.8 1.58c.85.48.85 1.25 0 1.73l-2.8 1.49zm-3.52-3.52l-9.33-9.33C4.24 1.27 4 1.46 4 1.83v20.34c0 .38.24.57.67.14l9.33-9.33zm1.06-1.06l2.1-2.1-9.97-5.6 7.87 7.7zm0 2.12l-7.87 7.7 9.97-5.6-2.1-2.1z"/>
+              </svg>
+              Android
+            </a>
+            
+            {/* Web App Button */}
+            <a
+              href="https://omenai.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-target flex items-center justify-center gap-3 bg-transparent border border-white/20 text-white px-6 py-4 rounded-full font-sans font-medium text-[0.7rem] tracking-[0.2em] uppercase hover:bg-white/10 hover:border-white/40 transition-colors duration-300 w-full sm:w-auto whitespace-nowrap"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Web App
+            </a>
+          </div>
+          <span className="block text-[0.65rem] tracking-[0.2em] text-[#F4F4F4]/50 uppercase mt-2">
+            Available worldwide
           </span>
         </div>
       </div>

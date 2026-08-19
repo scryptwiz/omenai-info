@@ -49,20 +49,20 @@ export default function EducationNav() {
         <img
           src="/omenai_logo.png"
           alt="Omenai Logo"
-          className="h-8 w-auto brightness-0 invert"
+          className="h-8 w-auto"
         />
       </Link>
 
       <div className="flex items-center gap-6 md:gap-10">
         <Link
           href="/education"
-          className="edu-nav-item text-[0.68rem] tracking-[0.25em] text-white/70 hover:text-white transition-colors uppercase hover-target hidden sm:block"
+          className="edu-nav-item text-[0.68rem] tracking-[0.25em] text-ink/70 hover:text-deepblue transition-colors uppercase hover-target hidden sm:block"
         >
           Masterclasses
         </Link>
         <Link
           href="#"
-          className="edu-nav-item text-[0.68rem] tracking-[0.25em] text-white hover:bg-white/10 transition-colors uppercase border border-white/60 px-5 py-2.5 rounded-full hover-target shadow-sm"
+          className="edu-nav-item text-[0.68rem] tracking-[0.25em] text-deepblue hover:bg-deepblue hover:text-white transition-colors uppercase border border-deepblue px-5 py-2.5 rounded-full hover-target shadow-sm"
         >
           Subscribe
         </Link>

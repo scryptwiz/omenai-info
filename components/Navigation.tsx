@@ -29,13 +29,22 @@ export default function Navigation() {
         nav.classList.add("bg-bg/90", "border-b-border-custom");
         nav.classList.remove("bg-transparent", "border-b-transparent");
         // Swap text colours back to dark
-        nav.querySelectorAll(".nav-light-text").forEach((el) =>
-          el.classList.remove("text-white/80")
-        );
+        nav
+          .querySelectorAll(".nav-light-text")
+          .forEach((el) => el.classList.remove("text-white/80"));
         // omenai.app outline button → deepblue
         nav.querySelectorAll(".nav-cta-outline").forEach((el) => {
-          el.classList.remove("border-white/60", "text-white", "hover:bg-white/10");
-          el.classList.add("border-deepblue", "text-deepblue", "hover:bg-deepblue", "hover:text-white");
+          el.classList.remove(
+            "border-white/60",
+            "text-white",
+            "hover:bg-white/10",
+          );
+          el.classList.add(
+            "border-deepblue",
+            "text-deepblue",
+            "hover:bg-deepblue",
+            "hover:text-white",
+          );
         });
         // Logo → dark (normal)
         nav.querySelectorAll(".nav-logo-img").forEach((el) => {
@@ -46,13 +55,22 @@ export default function Navigation() {
         nav.classList.remove("bg-bg/90", "border-b-border-custom");
         nav.classList.add("bg-transparent", "border-b-transparent");
         // Make text white so it reads on dark hero
-        nav.querySelectorAll(".nav-light-text").forEach((el) =>
-          el.classList.add("text-white/80")
-        );
+        nav
+          .querySelectorAll(".nav-light-text")
+          .forEach((el) => el.classList.add("text-white/80"));
         // omenai.app outline button → white
         nav.querySelectorAll(".nav-cta-outline").forEach((el) => {
-          el.classList.remove("border-deepblue", "text-deepblue", "hover:bg-deepblue", "hover:text-white");
-          el.classList.add("border-white/60", "text-white", "hover:bg-white/10");
+          el.classList.remove(
+            "border-deepblue",
+            "text-deepblue",
+            "hover:bg-deepblue",
+            "hover:text-white",
+          );
+          el.classList.add(
+            "border-white/60",
+            "text-white",
+            "hover:bg-white/10",
+          );
         });
         // Logo → white
         nav.querySelectorAll(".nav-logo-img").forEach((el) => {
@@ -104,11 +122,26 @@ export default function Navigation() {
       // Update rail dots
       document.querySelectorAll(".chapter-rail span").forEach((dot, i) => {
         if (i === index) {
-          dot.classList.add("h-[34px]", "opacity-100", "bg-deepblue", "rounded-[4px]");
-          dot.classList.remove("h-[4px]", "opacity-22", "bg-ink", "rounded-full");
+          dot.classList.add(
+            "h-[34px]",
+            "opacity-100",
+            "bg-deepblue",
+            "rounded-[4px]",
+          );
+          dot.classList.remove(
+            "h-[4px]",
+            "opacity-22",
+            "bg-ink",
+            "rounded-full",
+          );
         } else {
           dot.classList.add("h-[4px]", "opacity-22", "bg-ink", "rounded-full");
-          dot.classList.remove("h-[34px]", "opacity-100", "bg-deepblue", "rounded-[4px]");
+          dot.classList.remove(
+            "h-[34px]",
+            "opacity-100",
+            "bg-deepblue",
+            "rounded-[4px]",
+          );
         }
       });
 
@@ -124,7 +157,7 @@ export default function Navigation() {
               gsap.fromTo(
                 indicatorRef.current,
                 { y: 7 },
-                { autoAlpha: 1, y: 0, duration: 0.3 }
+                { autoAlpha: 1, y: 0, duration: 0.3 },
               );
             }
           },
@@ -155,7 +188,11 @@ export default function Navigation() {
         className="fixed top-0 left-0 right-0 z-[100] px-[5vw] py-6 md:px-16 md:py-[1.8rem] flex items-center justify-between bg-transparent backdrop-blur-md border-b border-b-transparent transition-all duration-500"
       >
         <div className="nav-logo opacity-0 flex items-center gap-2">
-          <img src="/omenai_logo.png" alt="Omenai Logo" className="nav-logo-img h-8 w-auto transition-[filter] duration-500 brightness-0 invert" />
+          <img
+            src="/omenai_logo.png"
+            alt="Omenai Logo"
+            className="nav-logo-img h-8 w-auto transition-[filter] duration-500 brightness-0 invert"
+          />
         </div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-10">
@@ -168,17 +205,26 @@ export default function Navigation() {
             <div className="nav-dot w-[6px] h-[6px] bg-gold rounded-full opacity-0" />
           </div>
           <div className="hidden md:flex gap-3 opacity-0 nav-cta">
-             <a
-               href="https://omenai.app"
-               target="_blank"
-               rel="noreferrer"
-               className="nav-cta-outline px-4 py-2 text-xs border border-white/60 text-white hover:bg-white/10 transition-colors duration-300 rounded-full uppercase tracking-wider"
-             >
-               omenai.app
-             </a>
-             <a href="#" className="px-4 py-2 text-xs bg-deepblue text-white hover:opacity-90 transition-opacity rounded-full uppercase tracking-wider">
-               Download App
-             </a>
+            <a
+              href="https://omenai.app"
+              target="_blank"
+              rel="noreferrer"
+              className="nav-cta-outline px-4 py-2 text-xs border border-white/60 text-white hover:bg-white/10 transition-colors duration-300 rounded-full uppercase tracking-wider"
+            >
+              omenai.app
+            </a>
+            <a
+              href="#outro"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("outro")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="px-4 py-2 text-xs bg-deepblue text-white hover:opacity-90 transition-opacity rounded-full uppercase tracking-wider"
+            >
+              Download App
+            </a>
           </div>
         </div>
       </nav>
