@@ -20,16 +20,25 @@ export default function Outro() {
     });
 
     tl.to(".outro-eyebrow", { autoAlpha: 1 })
-      .to(".outro-title-word", { y: "0%", stagger: 0.08, duration: 1.5, ease: "power4.out" }, 0)
-      .fromTo(".outro-title em", { xPercent: -15 }, { xPercent: 10, duration: 2 }, 0)
+      .to(
+        ".outro-title-word",
+        { y: "0%", stagger: 0.08, duration: 1.5, ease: "power4.out" },
+        0,
+      )
+      .fromTo(
+        ".outro-title em",
+        { xPercent: -15 },
+        { xPercent: 10, duration: 2 },
+        0,
+      )
       .to(".outro-url-wrap", { autoAlpha: 1, duration: 0.7 }, 0.9)
       .fromTo(
         ringRef.current,
         { scale: 0.45, rotation: -90 },
         { scale: 1.15, rotation: 35, duration: 2.2 },
-        0
+        0,
       );
-      
+
     ScrollTrigger.refresh();
   }, []);
 
@@ -37,8 +46,18 @@ export default function Outro() {
     <section
       id="outro"
       ref={sectionRef}
-      className="relative min-h-[85svh] md:min-h-[100vh] flex items-center py-[6rem] px-[6vw] md:py-[8rem] md:px-[8vw] bg-ink overflow-hidden"
+      className="relative min-h-[85svh] md:min-h-screen flex items-center py-24 px-[6vw] md:py-32 md:px-[8vw] bg-deepblue overflow-hidden"
     >
+      {/* Gold atmospheric radial glow — warmth behind the headline */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 28% 55%, rgba(176,141,64,0.11) 0%, transparent 70%)",
+        }}
+        aria-hidden="true"
+      />
+
       <div
         ref={ringRef}
         className="absolute w-[55vw] aspect-square border border-gold/35 rounded-full right-[-20vw] top-1/2 -translate-y-1/2"
@@ -50,28 +69,44 @@ export default function Outro() {
 
       <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_auto] gap-16 items-center relative z-10">
         <div>
-          <p className="outro-eyebrow text-[0.62rem] tracking-[0.35em] text-gold uppercase mb-6 opacity-0">
+          <p className="outro-eyebrow text-[0.62rem] tracking-[0.35em] text-gold uppercase mb-6 opacity-0 flex items-center gap-4">
+            <span className="inline-block w-6 h-[1px] bg-gold" />
             Omenai Platform
           </p>
           <h2
-            className="font-serif text-[clamp(3.5rem,17vw,6.4rem)] md:text-[clamp(4rem,10vw,11rem)] font-light leading-[0.77] text-[#f0ece4]"
+            className="font-serif text-[clamp(3.5rem,17vw,6.4rem)] md:text-[clamp(4rem,10vw,11rem)] font-light leading-[0.77] text-[#F4F4F4]"
             aria-label="The art world reimagined for Africa"
           >
             <span className="block overflow-hidden pb-[0.06em]">
-              <span className="outro-title-word inline-block translate-y-[110%]">The</span>&nbsp;
-              <span className="outro-title-word inline-block translate-y-[110%]">art</span>&nbsp;
-              <span className="outro-title-word inline-block translate-y-[110%]">world</span>
+              <span className="outro-title-word inline-block translate-y-[110%]">
+                The
+              </span>
+              &nbsp;
+              <span className="outro-title-word inline-block translate-y-[110%]">
+                art
+              </span>
+              &nbsp;
+              <span className="outro-title-word inline-block translate-y-[110%]">
+                world
+              </span>
             </span>
             <span className="block overflow-hidden pb-[0.06em]">
-              <em className="outro-title-word inline-block translate-y-[110%] italic text-gold pr-8">reimagined</em>
+              <em className="outro-title-word inline-block translate-y-[110%] italic text-gold pr-8">
+                reimagined
+              </em>
             </span>
             <span className="block overflow-hidden pb-[0.06em]">
-              <span className="outro-title-word inline-block translate-y-[110%]">for</span>&nbsp;
-              <span className="outro-title-word inline-block translate-y-[110%]">Africa.</span>
+              <span className="outro-title-word inline-block translate-y-[110%]">
+                for
+              </span>
+              &nbsp;
+              <span className="outro-title-word inline-block translate-y-[110%]">
+                Africa.
+              </span>
             </span>
           </h2>
         </div>
-        
+
         <div className="outro-url-wrap text-left md:text-right opacity-0">
           <a
             href="https://omenai.app"
@@ -81,7 +116,7 @@ export default function Outro() {
           >
             omenai.app
           </a>
-          <span className="block text-[0.65rem] tracking-[0.2em] text-[#f0ece4]/40 uppercase mt-3">
+          <span className="block text-[0.65rem] tracking-[0.2em] text-[#F4F4F4]/80 uppercase mt-3">
             Available on Web &amp; iOS
           </span>
         </div>

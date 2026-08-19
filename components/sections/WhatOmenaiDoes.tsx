@@ -85,6 +85,8 @@ export default function WhatOmenaiDoes() {
       ref={sectionRef}
       className="relative pt-[7rem] pb-[7rem] md:pt-[14rem] md:pb-[12rem] px-[5vw] overflow-hidden"
     >
+      {/* Gradient bridge from deep-blue Hero above */}
+      <div className="absolute top-0 left-0 right-0 h-[18vh] bg-gradient-to-b from-deepblue/[0.08] to-transparent pointer-events-none" />
       <div className="does-header grid grid-cols-1 md:grid-cols-2 gap-16 items-center md:min-h-[82vh] mb-20">
         <div>
           <p
@@ -123,13 +125,15 @@ export default function WhatOmenaiDoes() {
             fill
             className="object-cover transform scale-[1.14]"
           />
+          {/* Subtle gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent z-[1] pointer-events-none" />
           <span className="absolute bottom-4 left-4 text-[0.6rem] tracking-[0.2em] text-white/75 uppercase bg-[#1c1a17]/30 backdrop-blur-sm py-1.5 px-3 rounded-sm z-10">
             The Omenai Gallery Experience
           </span>
         </div>
       </div>
 
-      <div className="roles-tabs sticky top-[63px] md:top-[78px] z-10 bg-[#f3f0e9]/90 backdrop-blur-md flex border-b border-border-custom mb-12 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div className="roles-tabs sticky top-[63px] md:top-[78px] z-10 bg-bg/90 backdrop-blur-md flex border-b border-border-custom mb-12 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {(["collectors", "galleries", "artists"] as const).map((tab) => (
           <button
             key={tab}
@@ -160,11 +164,11 @@ export default function WhatOmenaiDoes() {
             { icon: "△", title: "Art Fairs & Events", desc: "Discover upcoming art fairs, gallery shows, and exhibitions curated across Africa and the global diaspora." }
           ].map((feat, i) => (
             <div key={i} className="role-feature hover-target group relative min-h-0 md:min-h-[240px] bg-bg p-[2.5rem_2rem] overflow-hidden border-b md:border-b-0 border-border-custom">
-              <div className="absolute inset-0 bg-ink translate-y-[101%] transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.18,1)] group-hover:translate-y-0" />
-              <div className="relative z-10 transition-colors duration-350 text-ink group-hover:text-[#f7f4ef]">
-                <span className="block w-8 h-8 mb-5 text-gold text-[1.1rem] flex items-center">{feat.icon}</span>
+              <div className="absolute inset-0 bg-deepblue translate-y-[101%] transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.18,1)] group-hover:translate-y-0" />
+              <div className="relative z-10 transition-colors duration-350 text-ink group-hover:text-[#F6F6F6]">
+                <span className="block w-8 h-8 mb-5 text-gold text-[1.6rem] flex items-center">{feat.icon}</span>
                 <h3 className="font-serif text-[1rem] font-normal mb-2">{feat.title}</h3>
-                <p className="text-[0.78rem] text-muted leading-[1.65] group-hover:text-[#f7f4ef]/80">{feat.desc}</p>
+                <p className="text-[0.78rem] text-muted leading-[1.65] group-hover:text-[#F6F6F6]/80">{feat.desc}</p>
               </div>
             </div>
           ))}
@@ -181,11 +185,11 @@ export default function WhatOmenaiDoes() {
             { icon: "△", title: "Promoted Placement", desc: "Feature in editorially curated sections, shows, and homepage promotions to reach the right collectors." }
           ].map((feat, i) => (
             <div key={i} className="role-feature hover-target group relative min-h-0 md:min-h-[240px] bg-bg p-[2.5rem_2rem] overflow-hidden border-b md:border-b-0 border-border-custom">
-              <div className="absolute inset-0 bg-ink translate-y-[101%] transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.18,1)] group-hover:translate-y-0" />
-              <div className="relative z-10 transition-colors duration-350 text-ink group-hover:text-[#f7f4ef]">
-                <span className="block w-8 h-8 mb-5 text-gold text-[1.1rem] flex items-center">{feat.icon}</span>
+              <div className="absolute inset-0 bg-deepblue translate-y-[101%] transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.18,1)] group-hover:translate-y-0" />
+              <div className="relative z-10 transition-colors duration-350 text-ink group-hover:text-[#F6F6F6]">
+                <span className="block w-8 h-8 mb-5 text-gold text-[1.6rem] flex items-center">{feat.icon}</span>
                 <h3 className="font-serif text-[1rem] font-normal mb-2">{feat.title}</h3>
-                <p className="text-[0.78rem] text-muted leading-[1.65] group-hover:text-[#f7f4ef]/80">{feat.desc}</p>
+                <p className="text-[0.78rem] text-muted leading-[1.65] group-hover:text-[#F6F6F6]/80">{feat.desc}</p>
               </div>
             </div>
           ))}
@@ -202,11 +206,11 @@ export default function WhatOmenaiDoes() {
             { icon: "△", title: "Audience Growth", desc: "Build a following on Omenai — collectors who follow you are notified directly when you upload new works." }
           ].map((feat, i) => (
             <div key={i} className="role-feature hover-target group relative min-h-0 md:min-h-[240px] bg-bg p-[2.5rem_2rem] overflow-hidden border-b md:border-b-0 border-border-custom">
-              <div className="absolute inset-0 bg-ink translate-y-[101%] transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.18,1)] group-hover:translate-y-0" />
-              <div className="relative z-10 transition-colors duration-350 text-ink group-hover:text-[#f7f4ef]">
-                <span className="block w-8 h-8 mb-5 text-gold text-[1.1rem] flex items-center">{feat.icon}</span>
+              <div className="absolute inset-0 bg-deepblue translate-y-[101%] transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.18,1)] group-hover:translate-y-0" />
+              <div className="relative z-10 transition-colors duration-350 text-ink group-hover:text-[#F6F6F6]">
+                <span className="block w-8 h-8 mb-5 text-gold text-[1.6rem] flex items-center">{feat.icon}</span>
                 <h3 className="font-serif text-[1rem] font-normal mb-2">{feat.title}</h3>
-                <p className="text-[0.78rem] text-muted leading-[1.65] group-hover:text-[#f7f4ef]/80">{feat.desc}</p>
+                <p className="text-[0.78rem] text-muted leading-[1.65] group-hover:text-[#F6F6F6]/80">{feat.desc}</p>
               </div>
             </div>
           ))}

@@ -69,13 +69,13 @@ export default function Payment() {
           if (self.isActive) {
             step.classList.add("opacity-100");
             step.classList.remove("opacity-22", "md:opacity-22");
-            step.querySelector(".p-num")?.classList.add("text-gold");
+            step.querySelector(".p-num")?.classList.add("text-deepblue");
             step.querySelector(".p-line")?.classList.add("w-full");
             step.querySelector(".p-line")?.classList.remove("w-0");
           } else {
             step.classList.remove("opacity-100");
             step.classList.add("md:opacity-22");
-            step.querySelector(".p-num")?.classList.remove("text-gold");
+            step.querySelector(".p-num")?.classList.remove("text-deepblue");
           }
         },
       });
@@ -86,7 +86,7 @@ export default function Payment() {
     <section
       id="payment"
       ref={sectionRef}
-      className="relative pt-[7rem] pb-[7rem] md:pt-[12rem] md:pb-[12rem] px-[5vw] overflow-hidden bg-surface"
+      className="relative pt-[7rem] pb-[7rem] md:pt-[12rem] md:pb-[12rem] px-[5vw] overflow-hidden bg-bg"
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-12 md:gap-24 items-start">
         <div className="md:sticky md:top-[18vh]">
@@ -99,7 +99,7 @@ export default function Payment() {
           </p>
           <h2
             ref={titleRef}
-            className="font-serif text-[clamp(2.4rem,4.5vw,5.5rem)] font-light leading-[1.05]"
+            className="font-serif text-[clamp(2.4rem,4.5vw,5.5rem)] font-light leading-[1.05] text-deepblue"
           >
             <span className="block overflow-hidden pb-[0.06em]">
               <span className="pay-title-word inline-block translate-y-[110%]">Secure,</span>
@@ -136,18 +136,18 @@ export default function Payment() {
             { num: "06", label: "Seller Earnings", title: "Wallet & Payouts", desc: "Seller earnings are held securely in their Omenai wallet, moving from pending to available after fulfilment. Funds can then be withdrawn to their nominated account.", badges: ["Pending → Available", "Withdrawable"] }
           ].map((step, i) => (
             <div key={i} className="p-step group relative grid grid-cols-[56px_1fr] gap-6 items-start py-[2.2rem] border-b border-border-custom opacity-100 md:opacity-22 md:min-h-[28vh] content-center transition-opacity duration-300">
-              <span className="p-num font-serif text-[2rem] md:text-[3.7rem] font-light text-gold-mid leading-none tracking-[-0.02em] transition-colors duration-300">{step.num}</span>
+              <span className="p-num font-serif text-[2rem] md:text-[3.7rem] font-light text-ink/30 leading-none tracking-[-0.02em] transition-colors duration-300">{step.num}</span>
               <div>
-                <span className="block text-[0.62rem] tracking-[0.25em] text-gold uppercase mb-2">{step.label}</span>
+                <span className="block text-[0.62rem] tracking-[0.25em] text-deepblue uppercase mb-2">{step.label}</span>
                 <h3 className="font-serif text-[1.2rem] font-normal text-ink mb-2">{step.title}</h3>
                 <p className="text-[0.8rem] text-muted leading-[1.7]">{step.desc}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
                   {step.badges.map((badge, j) => (
-                    <span key={j} className="text-[0.6rem] tracking-[0.1em] py-[0.25rem] px-[0.65rem] bg-gold-light text-gold rounded-full uppercase">{badge}</span>
+                    <span key={j} className="text-[0.6rem] tracking-[0.1em] py-[0.25rem] px-[0.65rem] bg-deepblue/10 text-deepblue rounded-full uppercase">{badge}</span>
                   ))}
                 </div>
               </div>
-              <div className="p-line absolute bottom-[-1px] left-0 h-[1px] w-0 bg-gold transition-all duration-700 ease-in-out hidden md:block" />
+              <div className="p-line absolute bottom-[-1px] left-0 h-[1px] w-0 bg-deepblue transition-all duration-700 ease-in-out hidden md:block" />
             </div>
           ))}
         </div>

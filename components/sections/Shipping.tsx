@@ -73,8 +73,8 @@ export default function Shipping() {
             
             const num = step.querySelector(".s-num");
             if (num) {
-              num.classList.add("bg-gold", "text-white", "scale-[1.15]");
-              num.classList.remove("text-gold");
+              num.classList.add("bg-deepblue", "text-white", "scale-[1.15]");
+              num.classList.remove("text-deepblue");
             }
           } else {
             step.classList.remove("opacity-100");
@@ -82,8 +82,8 @@ export default function Shipping() {
             
             const num = step.querySelector(".s-num");
             if (num) {
-              num.classList.remove("bg-gold", "text-white", "scale-[1.15]");
-              num.classList.add("text-gold");
+              num.classList.remove("bg-deepblue", "text-white", "scale-[1.15]");
+              num.classList.add("text-deepblue");
             }
           }
         },
@@ -144,13 +144,13 @@ export default function Shipping() {
               { num: "6", title: "Real-time Tracking", desc: "A tracking link is issued so both parties can monitor the artwork's journey from collection to delivery, with status updates along the way." },
               { num: "7", title: "Delivery & Completion", desc: "Once the artwork arrives, the buyer confirms receipt. Proof of delivery is stored, the order is marked complete, and seller earnings are fully released." }
             ].map((step, i, arr) => (
-              <div key={i} className="s-step flex gap-8 py-8 border-b border-border-custom opacity-100 md:opacity-20 transition-opacity duration-300">
+              <div key={i} className="s-step flex gap-8 py-8 border-b border-deepblue/30 opacity-100 md:opacity-20 transition-opacity duration-300">
                 <div className="flex flex-col items-center flex-shrink-0">
-                  <div className="s-num w-9 h-9 rounded-full border border-gold-mid flex items-center justify-center font-serif text-[0.85rem] text-gold transition-all duration-350">
+                  <div className="s-num w-9 h-9 rounded-full border border-deepblue/50 flex items-center justify-center font-serif text-[0.85rem] text-deepblue transition-all duration-350">
                     {step.num}
                   </div>
                   {i < arr.length - 1 && (
-                    <div className="s-line w-[1px] flex-1 bg-border-custom min-h-[20px] mt-1.5" />
+                    <div className="s-line w-[1px] flex-1 bg-deepblue/30 min-h-[20px] mt-1.5" />
                   )}
                 </div>
                 <div className="flex-1 pb-2">
@@ -176,16 +176,16 @@ export default function Shipping() {
             />
           </div>
           
-          <div className="ship-stat-grid grid grid-cols-2 gap-[1px] bg-border-custom border border-border-custom rounded-sm overflow-hidden">
+          <div className="ship-stat-grid grid grid-cols-2 gap-[1px] bg-gold/20 border border-gold/20 rounded-sm overflow-hidden">
             {[
               { value: "7", label: "Step Journey" },
               { value: "100+", label: "Countries Reached" },
               { value: "2", label: "Packaging Options" },
               { value: "Live", label: "Tracking Updates" }
             ].map((stat, i) => (
-              <div key={i} className="ship-stat bg-surface p-6 opacity-0 translate-y-[10px]">
-                <span className="block font-serif text-[2rem] font-light text-gold mb-1">{stat.value}</span>
-                <span className="text-[0.68rem] tracking-[0.15em] text-muted uppercase">{stat.label}</span>
+              <div key={i} className="ship-stat bg-deepblue p-6 opacity-0 translate-y-[10px]">
+                <span className="block font-serif italic text-[2.6rem] font-light text-gold mb-1">{stat.value}</span>
+                <span className="text-[0.68rem] tracking-[0.15em] text-white/80 uppercase">{stat.label}</span>
               </div>
             ))}
           </div>

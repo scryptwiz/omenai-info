@@ -112,7 +112,7 @@ export default function EducationLanding() {
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className="bg-[#f3f0e9] min-h-screen text-ink font-sans selection:bg-gold/30">
+    <div ref={containerRef} className="bg-deepblue min-h-screen text-white font-sans selection:bg-gold/30">
       <Cursor />
       <EducationNav />
       
@@ -132,7 +132,7 @@ export default function EducationLanding() {
               <em className="edu-hero-word inline-block italic text-gold pr-4">masters.</em>
             </span>
           </h1>
-          <p className="edu-hero-fade mt-8 text-ink/70 max-w-md text-sm md:text-base leading-relaxed opacity-0 translate-y-6">
+          <p className="edu-hero-fade mt-8 text-white/70 max-w-md text-sm md:text-base leading-relaxed opacity-0 translate-y-6">
             Gain unlimited access to high-production video classes taught by Africa&apos;s most celebrated contemporary artists.
           </p>
         </div>
@@ -150,7 +150,7 @@ export default function EducationLanding() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent pointer-events-none" />
             
             <div className="edu-featured-content absolute bottom-6 left-6 md:bottom-12 md:left-12">
-              <span className="text-[0.6rem] tracking-[0.2em] uppercase text-ink font-semibold bg-white/90 backdrop-blur-md px-4 py-2 rounded-full mb-6 inline-block shadow-sm">
+              <span className="text-[0.6rem] tracking-[0.2em] uppercase text-white font-semibold bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6 inline-block shadow-sm">
                 Featured Masterclass
               </span>
               <h2 className="font-serif text-3xl md:text-5xl font-light mb-3 text-white group-hover:text-gold transition-colors duration-500">
@@ -162,7 +162,7 @@ export default function EducationLanding() {
             </div>
             
             <div className="edu-featured-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-24 md:h-24 bg-white/30 backdrop-blur-md border border-white/40 rounded-full flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-all duration-500 shadow-xl group-hover:scale-110">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white translate-x-[2px] group-hover:text-ink transition-colors duration-500">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white translate-x-[2px] group-hover:text-deepblue transition-colors duration-500">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
               </svg>
             </div>
@@ -171,9 +171,9 @@ export default function EducationLanding() {
 
         {/* Course Grid */}
         <div className="max-w-[1200px] mx-auto edu-grid">
-          <div className="flex items-end justify-between mb-12 border-b border-border-custom pb-6">
-            <h3 className="font-serif text-3xl md:text-5xl text-ink">All Masterclasses</h3>
-            <span className="text-[0.65rem] tracking-[0.2em] uppercase text-ink/50 hidden sm:block font-medium">
+          <div className="flex items-end justify-between mb-12 border-b border-white/10 pb-6">
+            <h3 className="font-serif text-3xl md:text-5xl text-white">All Masterclasses</h3>
+            <span className="text-[0.65rem] tracking-[0.2em] uppercase text-white/50 hidden sm:block font-medium">
               {MOCK_COURSES.length} Courses Available
             </span>
           </div>
@@ -188,7 +188,7 @@ export default function EducationLanding() {
         </div>
         
         {/* Subscription CTA Banner */}
-        <div className="edu-banner max-w-[1200px] mx-auto mt-32 relative overflow-hidden rounded-md border border-gold/30 bg-ink p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 text-center md:text-left shadow-2xl">
+        <div className="edu-banner max-w-[1200px] mx-auto mt-32 relative overflow-hidden rounded-md border border-gold/30 bg-white/5 p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 text-center md:text-left shadow-2xl">
           <div className="absolute top-0 right-0 w-[60vw] h-[60vw] md:w-[40vw] md:h-[40vw] bg-gold/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
           
           <div className="relative z-10 max-w-xl text-white">
@@ -200,7 +200,7 @@ export default function EducationLanding() {
             </p>
           </div>
           
-          <button className="relative z-10 hover-target bg-gold text-white font-sans text-[0.75rem] tracking-[0.25em] uppercase px-10 py-5 rounded-full transition-transform duration-300 hover:scale-105 whitespace-nowrap shadow-xl">
+          <button className="relative z-10 hover-target bg-deepblue text-white border border-white/10 font-sans text-[0.75rem] tracking-[0.25em] uppercase px-10 py-5 rounded-full transition-all duration-300 hover:scale-105 hover:bg-white/5 whitespace-nowrap shadow-xl">
             Subscribe Now
           </button>
         </div>

@@ -3,6 +3,8 @@
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Lottie } from "lottie-react";
+import omenaiLoaderAnimation from "./omenai_loader.json";
 
 export default function Loader({ onComplete }: { onComplete: () => void }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -11,7 +13,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
 
   useGSAP(() => {
     const isReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (isReducedMotion) {
@@ -29,23 +31,14 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       },
     });
 
-    tl.to(".loader-line-fill", {
-      x: "0%",
-      duration: 1.15,
+    tl.to(countRef.current, {
+      value: 100,
+      duration: 1.5,
       ease: "power2.inOut",
+      onUpdate: () => {
+        setCount(Math.round(countRef.current.value));
+      },
     })
-      .to(
-        countRef.current,
-        {
-          value: 100,
-          duration: 1.15,
-          ease: "power2.inOut",
-          onUpdate: () => {
-            setCount(Math.round(countRef.current.value));
-          },
-        },
-        0
-      )
       .to(
         ".loader-word",
         {
@@ -53,7 +46,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           duration: 0.8,
           ease: "expo.inOut",
         },
-        1.25
+        "+=0.2",
       )
       .to(
         containerRef.current,
@@ -62,7 +55,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           duration: 1,
           ease: "expo.inOut",
         },
-        1.35
+        "-=0.6",
       )
       .set(containerRef.current, { display: "none" });
   }, []);
@@ -70,18 +63,17 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[9997] bg-ink text-bg grid place-items-center overflow-hidden"
+      className="fixed inset-0 z-9997 bg-bg text-ink grid place-items-center overflow-hidden"
       aria-hidden="true"
     >
-      <div className="text-center">
-        <div className="loader-word font-serif font-light text-[clamp(3rem,9vw,9rem)] leading-[0.8] tracking-[0.12em] overflow-hidden">
-          <div className="inline-block">OMENAI</div>
-        </div>
-        <div className="w-[min(280px,56vw)] h-[1px] my-[2.2rem] mx-auto bg-white/20 overflow-hidden relative">
-          <i className="loader-line-fill absolute inset-0 bg-gold -translate-x-full block" />
-        </div>
-        <div className="text-[0.62rem] tracking-[0.28em] text-white/55">
-          {String(count).padStart(2, "0")}
+      <div className="text-center flex flex-col items-center">
+        <div className="loader-word flex flex-col items-center justify-center">
+          <div className="w-45 md:w-80 mb-4">
+            <Lottie src={omenaiLoaderAnimation} loop={true} autoplay />
+          </div>
+          {/* <div className="text-[0.62rem] tracking-[0.28em] text-ink/55">
+            {String(count).padStart(2, "0")}
+          </div> */}
         </div>
       </div>
     </div>

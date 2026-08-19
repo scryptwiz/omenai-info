@@ -27,7 +27,7 @@ export default function Home() {
       <main className="relative z-10 w-full overflow-hidden">
         <Hero />
         
-        <div className="mx-[5vw] h-[1px] bg-border-custom origin-left full-divider" />
+        {/* No divider between dark Hero and light WhatOmenaiDoes — gradient handles the transition */}
         <WhatOmenaiDoes />
         
         <div className="mx-[5vw] h-[1px] bg-border-custom origin-left full-divider" />
