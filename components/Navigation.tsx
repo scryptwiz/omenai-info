@@ -206,6 +206,12 @@ export default function Navigation() {
           </div>
           <div className="hidden md:flex gap-3 opacity-0 nav-cta">
             <a
+              href="/education"
+              className="nav-light-text flex items-center px-4 py-2 text-xs text-white hover:text-white/70 transition-colors duration-300 uppercase tracking-wider"
+            >
+              Masterclasses
+            </a>
+            <a
               href="https://omenai.app"
               target="_blank"
               rel="noreferrer"
